@@ -1,0 +1,32 @@
+<launch>
+    <!--	    <arg name="model" />-->
+    <!--	<arg name="gui" default="true" /> -->
+    <!--	    <param name="robot_description" textfile="$(arg model)" />-->
+ 
+    <!-- <arg name="rvizconfig" default="$(find denso)/rviz/urdf.rviz" /> -->
+ 
+    <!--	<rosparam file="$(find raven_2)/params/r2params_kist.yaml" command="load" output="screen" /> -->
+
+
+    <!-- This is a comment in .xml or .launch file -->
+    <!-- Type is the name of the executable for node.... -->
+
+    <!-- Launch nodes. 'type' refers to .exe file of the node -->
+
+    <!-- 	<param name="use_gui" value="$(arg gui)"/> -->
+    <!--	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+    <!--	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" /> -->
+
+    <!--	    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />-->
+
+<!--    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> -->
+
+	<node name ="JstckInput" pkg="joy" type="joy_node" output="screen">
+	<param name="dev" value="/dev/input/js0"> </param> </node>
+    <!--    <node name ="Jstck2Hap" pkg="SkillMate" type="joy2Hap" output="screen"/> -->
+
+    <!--	    <node name ="HapticInput" pkg="denso" type="hapticDevice" args="192.168.1.20 7127" output="screen"/>-->
+        <!--	<node name ="Mouse_3D" pkg="denso" type="mouse_3d" output="screen"/> -->
+	<!--	<node name ="DensoCtrl" pkg="DensoArm" type="denso_rt" output="screen"/> -->
+        <node name ="CatheterCtrl" pkg="RobotCatheter" type="catheter_rt" output="screen"/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/ckim/HujoonROS/devel
+
+Name: DensoArm
+Description: Description of DensoArm
+Version: 0.0.0
+Cflags: -I/home/ckim/HujoonROS/src/DensoArm/include
+Libs: -L/home/ckim/HujoonROS/devel/lib -lDensoArm
+Requires: roscpp rospy std_msgs SkillMate

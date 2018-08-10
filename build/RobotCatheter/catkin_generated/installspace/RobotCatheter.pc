@@ -1,0 +1,8 @@
+prefix=/home/ckim/HujoonROS/install
+
+Name: RobotCatheter
+Description: Description of RobotCatheter
+Version: 0.0.0
+Cflags: -I/home/ckim/HujoonROS/install/include
+Libs: -L/home/ckim/HujoonROS/install/lib -lRobotCatheter
+Requires: roscpp rospy std_msgs message_runtime

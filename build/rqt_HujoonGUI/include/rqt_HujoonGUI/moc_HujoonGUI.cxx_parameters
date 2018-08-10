@@ -1,0 +1,12 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="rqt_HujoonGUI"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-DQT_NO_DEBUG
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-o
+/home/ckim/HujoonROS/build/rqt_HujoonGUI/include/rqt_HujoonGUI/moc_HujoonGUI.cxx
+/home/ckim/HujoonROS/src/rqt_HujoonGUI/include/rqt_HujoonGUI/HujoonGUI.h

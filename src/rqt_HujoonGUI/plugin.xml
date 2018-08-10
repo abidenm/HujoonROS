@@ -1,0 +1,19 @@
+
+<!--CKim : Writing rqt GUI in cpp results a library file. Specify the Path to the enerated library file-->
+<library path="lib/librqt_HujoonGUI">
+  <class name="rqt_HujoonGUI/HujoonGUI" type="rqt_HujoonGUI::HujoonGUI" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      A GUI plugin for Dr.Hujoon Robot.
+    </description>
+    <qtgui>
+      <group>
+        <label>Visualization</label>
+        <icon type="theme">folder</icon>
+        <statustip>Plugins related to visualization.</statustip>
+      </group>
+      <label>HujoonGUI</label>
+      <icon type="theme">image-x-generic</icon>
+      <statustip>A GUI plugin for Dr.Hujoon Robot.</statustip>
+    </qtgui>
+  </class>
+</library>

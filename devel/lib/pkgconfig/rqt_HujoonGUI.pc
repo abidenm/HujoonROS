@@ -1,0 +1,8 @@
+prefix=/home/ckim/HujoonROS/devel
+
+Name: rqt_HujoonGUI
+Description: Description of rqt_HujoonGUI
+Version: 0.0.0
+Cflags: -I/home/ckim/HujoonROS/src/rqt_HujoonGUI/include -I/home/ckim/HujoonROS/build/rqt_HujoonGUI
+Libs: -L/home/ckim/HujoonROS/devel/lib -lrqt_HujoonGUI
+Requires: rospy rqt_gui rqt_gui_cpp

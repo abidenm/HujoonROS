@@ -1,0 +1,8 @@
+prefix=/home/ckim/HujoonROS/devel
+
+Name: SkillMate
+Description: Description of SkillMate
+Version: 0.0.0
+Cflags: -I/home/ckim/HujoonROS/devel/include -I/home/ckim/HujoonROS/src/SkillMate/include
+Libs: -L/home/ckim/HujoonROS/devel/lib -lSkillMate
+Requires: roscpp rospy std_msgs message_runtime

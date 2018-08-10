@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ckim/HujoonROS/src/RobotCatheter/src/rt_serial.cpp
+rt_serial.h
+/home/ckim/HujoonROS/src/RobotCatheter/src/rt_serial.h
+
