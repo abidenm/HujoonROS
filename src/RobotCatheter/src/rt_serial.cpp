@@ -445,19 +445,24 @@ void rt_serial::PublishState()
     float initCnt = 800000;             float cntPerMtrTurn = 2048;   float MtrTurnPerShaft = 5.4;
     float ShaftTurnPerScrew = -4.0;     float ScrewPitch = 1.0;       float Amp = 16.95;    // = 750000/1/4.0/5.4/2048;
 
+    //All Loadcell calibration is done.
+    float TensionA[4] = {	0.5060, 0.46067, 0.48627, 0.50693 };	// CKim - Tension (in gram) = TensionA*ADC+TensiionB
+    float TensionB[4] = {  -46.0506, -34.625, -38.641, -192.54 };
+
     int cnt[4];
 
     // CKim - Copy from the REGISTER
     pthread_mutex_lock( &register_mutex);
     for(int i = 0; i < 4; i++){
         cnt[i] = *M[i].pos;
-        cState.Tension[i] = *M[i].loadcell;
+	ADC[i] = *M[i].loadcell;
         cState.Current[i] = *M[i].current;
     }
     pthread_mutex_unlock( &register_mutex);
 
     for(int i = 0; i < 4; i++){
         cState.Displacement[i] = (cnt[i] - initCnt)/cntPerMtrTurn/MtrTurnPerShaft/ShaftTurnPerScrew;
+	cState.Tension[i] = TensionA[i]*ADC[i] + TensionB[i];
     }
 
 
